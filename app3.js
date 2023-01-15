@@ -235,14 +235,16 @@ const data = [
 const filteredData = data.filter((data) => data);
 // document.write(JSON.stringify(filteredData)  + "<br />");
 const emailList = filteredData.map((item) => item.email);
-const emailDescanding = emailList.sort(( a, b ) => (a.email >= b.email ? -1:1));
+const emailDescanding = emailList.sort((a,b) => (a.email >= b.email)?-1:1);
 // document.write(emailList);
-// document.write(emailDescanding);
-const companyNameList = filteredData.map((item) => item.company.name);
-const companyNameAescanding = companyNameList.sort(( a, b ) => (a.company.name >= b.company.name ? -1:1));
-document.write(companyNameAescanding);
+document.write(emailDescanding) + '<br />';
+
+const companyNameList = filteredData.map((item) => item.name);
+const companyNameAescanding = companyNameList.sort((a,b ) => (a.name<=b.name)? -1:1);
 // document.write(companyNameList);
+document.write(companyNameAescanding) + '<br />';
 
 
-// const companyNameGenap = filteredData.map((item) => item.company.name);
-// document.write(emailDescanding);
+const iDNameAddress = data.map((data) => data.id +" "+ data.name +"---"+ data.address.street)
+const iDNameAddress1 = data.map((data) => data.id)
+document.write(iDNameAddress) + '<br />';

@@ -3,9 +3,6 @@ class Row {
         this.rows = makeRow;
     }
     getIndexOf(array){
-        // for(let i=0; i<array.length;i++){
-            
-        // }
         return array.map((num) => this.rows.indexOf(num));
     }
     getValue(index){
