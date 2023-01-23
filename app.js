@@ -22,13 +22,12 @@ const makeRow = () => {
 };
 
 const numArray = new Row(makeRow());
-// document.write(makeRow());
 
-document.write(numArray.getIndexOf([52,55,57,68,77]) + '<br />');
-document.write(numArray.getValue(250) + '<br />');
-document.write(numArray.sortDescending() + '<br />');
+// Ada array [52, 55, 57, 68, 77]. Class tersebut bisa menampilkan index dari nilai-nilai tersebut
+document.write( '1. Ada array [52, 55, 57, 68, 77]. Class tersebut bisa menampilkan index dari nilai-nilai tersebut' + '<br />' + numArray.getIndexOf([52,55,57,68,77]) + '<br />' + '<br />' + '<br />');
 
+// Ada fungsi yg bisa menampilkan nilai dr deret berdasarkan index tertentu
+document.write('2. Ada fungsi yg bisa menampilkan nilai dr deret berdasarkan index tertentu' + '<br />' + numArray.getValue(250) + '<br />' + '<br />' + '<br />');
 
-
-
-
+// Ada fungsi yg bisa printing deret dari nilai tertinggi
+document.write('3. Ada fungsi yg bisa printing deret dari nilai tertinggi' + '<br />' + numArray.sortDescending() + '<br />' + '<br />' + '<br />');

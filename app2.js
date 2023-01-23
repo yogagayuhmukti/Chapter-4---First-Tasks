@@ -24,5 +24,8 @@ class FinalValue {
 
 const operation = new FinalValue([`x++`,`++x`,`--x`, `++x`, `x--`, `x++`]);
 
-document.write(operation.getFinalValue() + '<br />');
-document.write(operation.showIndexValue() + '<br />');
+// Ada fungsi yg menghasilkan nilai akhir
+document.write('1. Ada fungsi yg menghasilkan nilai akhir' + '<br />' + operation.getFinalValue() + '<br />' + '<br />' + '<br />');
+
+// Ada fungsi yang bisa print informasi setiap index apakah decrement atau increment
+document.write('2. Ada fungsi yang bisa print informasi setiap index apakah decrement atau increment' + '<br />' + operation.showIndexValue() + '<br />' + '<br />' + '<br />');

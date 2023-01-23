@@ -232,19 +232,17 @@ const data = [
   ];
 
 
-const filteredData = data.filter((data) => data);
-// document.write(JSON.stringify(filteredData)  + "<br />");
-const emailList = filteredData.map((item) => item.email);
-const emailDescanding = emailList.sort((a,b) => (a.email >= b.email)?-1:1);
-// document.write(emailList);
-document.write(emailDescanding) + '<br />';
+// Berdasarkan email, descending
+const emailList = data.map((item) => item.email).sort().reverse();
+console.log(emailList);
+document.write('1. Berdasarkan email, descending' + '<br />' + emailList + '<br />' + '<br />' + '<br />');
 
-const companyNameList = filteredData.map((item) => item.name);
-const companyNameAescanding = companyNameList.sort((a,b ) => (a.name<=b.name)? -1:1);
-// document.write(companyNameList);
-document.write(companyNameAescanding) + '<br />';
+// Berdasarkan company name, ascending
+const companyName = data.map((item) => item.company.name).sort();
+console.log(companyName);
+document.write('2. Berdasarkan company name, ascending' + '<br />' + companyName + '<br />' + '<br />' + '<br />');
 
-
-const iDNameAddress = data.map((data) => data.id +" "+ data.name +"---"+ data.address.street)
-const iDNameAddress1 = data.map((data) => data.id)
-document.write(iDNameAddress) + '<br />';
+// Buat fungsi yang return list nama company dan alamat dimana ID nya genap. Pake filter & map
+const companyIdGenap = data.filter((item) => item.id%2===0).sort().map((item) => " nomor id " + item.id + " nama company " + item.company.name + " dan alamatnya di " + item.address.street)
+console.log(companyIdGenap);
+document.write('3. Buat fungsi yang return list nama company dan alamat dimana ID nya genap. Pake filter & map' + '<br />' + companyIdGenap + '<br />' + '<br />' + '<br />');
